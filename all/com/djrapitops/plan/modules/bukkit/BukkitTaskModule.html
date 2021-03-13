@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -153,9 +153,13 @@ public interface <span class="typeNameLabel">BukkitTaskModule</span></pre>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/djrapitops/plan/TaskSystem.Task.html" title="class in com.djrapitops.plan">TaskSystem.Task</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/djrapitops/plan/modules/bukkit/BukkitTaskModule.html#bindShutdownHookRegistration-com.djrapitops.plan.gathering.ShutdownHook.Registrar-">bindShutdownHookRegistration</a></span>(<a href="../../../../../com/djrapitops/plan/gathering/ShutdownHook.Registrar.html" title="class in com.djrapitops.plan.gathering">ShutdownHook.Registrar</a>&nbsp;registrar)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/djrapitops/plan/modules/bukkit/BukkitTaskModule.html#bindShutdownDataPreservation-com.djrapitops.plan.gathering.ShutdownDataPreservation-">bindShutdownDataPreservation</a></span>(<a href="../../../../../com/djrapitops/plan/gathering/ShutdownDataPreservation.html" title="class in com.djrapitops.plan.gathering">ShutdownDataPreservation</a>&nbsp;dataPreservation)</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/djrapitops/plan/TaskSystem.Task.html" title="class in com.djrapitops.plan">TaskSystem.Task</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/djrapitops/plan/modules/bukkit/BukkitTaskModule.html#bindShutdownHookRegistration-com.djrapitops.plan.gathering.ShutdownHook.Registrar-">bindShutdownHookRegistration</a></span>(<a href="../../../../../com/djrapitops/plan/gathering/ShutdownHook.Registrar.html" title="class in com.djrapitops.plan.gathering">ShutdownHook.Registrar</a>&nbsp;registrar)</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/djrapitops/plan/TaskSystem.Task.html" title="class in com.djrapitops.plan">TaskSystem.Task</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/djrapitops/plan/modules/bukkit/BukkitTaskModule.html#bindTPSCounter-com.djrapitops.plan.gathering.timed.ServerTPSCounter-">bindTPSCounter</a></span>(<a href="../../../../../com/djrapitops/plan/gathering/timed/ServerTPSCounter.html" title="class in com.djrapitops.plan.gathering.timed">ServerTPSCounter</a>&lt;org.bukkit.World&gt;&nbsp;tpsCounter)</code>&nbsp;</td>
 </tr>
@@ -276,12 +280,23 @@ public interface <span class="typeNameLabel">BukkitTaskModule</span></pre>
 <a name="bindJSONFileStorageCleanTask-com.djrapitops.plan.delivery.webserver.cache.JSONFileStorage.CleanTask-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>bindJSONFileStorageCleanTask</h4>
 <pre>@Binds
  @IntoSet
 <a href="../../../../../com/djrapitops/plan/TaskSystem.Task.html" title="class in com.djrapitops.plan">TaskSystem.Task</a>&nbsp;bindJSONFileStorageCleanTask(<a href="../../../../../com/djrapitops/plan/delivery/webserver/cache/JSONFileStorage.CleanTask.html" title="class in com.djrapitops.plan.delivery.webserver.cache">JSONFileStorage.CleanTask</a>&nbsp;cleanTask)</pre>
+</li>
+</ul>
+<a name="bindShutdownDataPreservation-com.djrapitops.plan.gathering.ShutdownDataPreservation-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>bindShutdownDataPreservation</h4>
+<pre>@Binds
+ @IntoSet
+<a href="../../../../../com/djrapitops/plan/TaskSystem.Task.html" title="class in com.djrapitops.plan">TaskSystem.Task</a>&nbsp;bindShutdownDataPreservation(<a href="../../../../../com/djrapitops/plan/gathering/ShutdownDataPreservation.html" title="class in com.djrapitops.plan.gathering">ShutdownDataPreservation</a>&nbsp;dataPreservation)</pre>
 </li>
 </ul>
 </li>
