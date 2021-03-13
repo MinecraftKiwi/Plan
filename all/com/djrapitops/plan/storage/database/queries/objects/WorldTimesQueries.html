@@ -130,9 +130,9 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/GMTimes.html" title="class in com.djrapitops.plan.gathering.domain">GMTimes</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/WorldTimesQueries.html#fetchGMTimes-long-long-java.util.UUID-">fetchGMTimes</a></span>(long&nbsp;after,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/WorldTimesQueries.html#fetchGMTimes-long-long-com.djrapitops.plan.identification.ServerUUID-">fetchGMTimes</a></span>(long&nbsp;after,
             long&nbsp;before,
-            java.util.UUID&nbsp;serverUUID)</code>&nbsp;</td>
+            <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/WorldTimes.html" title="class in com.djrapitops.plan.gathering.domain">WorldTimes</a>&gt;</code></td>
@@ -141,14 +141,14 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;java.util.UUID,<a href="../../../../../../../com/djrapitops/plan/gathering/domain/WorldTimes.html" title="class in com.djrapitops.plan.gathering.domain">WorldTimes</a>&gt;&gt;</code></td>
+<td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;<a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>,<a href="../../../../../../../com/djrapitops/plan/gathering/domain/WorldTimes.html" title="class in com.djrapitops.plan.gathering.domain">WorldTimes</a>&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/WorldTimesQueries.html#fetchPlayerWorldTimesOnServers-java.util.UUID-">fetchPlayerWorldTimesOnServers</a></span>(java.util.UUID&nbsp;playerUUID)</code>
 <div class="block">Find total world times of the player on servers.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/WorldTimes.html" title="class in com.djrapitops.plan.gathering.domain">WorldTimes</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/WorldTimesQueries.html#fetchServerTotalWorldTimes-java.util.UUID-">fetchServerTotalWorldTimes</a></span>(java.util.UUID&nbsp;serverUUID)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/WorldTimesQueries.html#fetchServerTotalWorldTimes-com.djrapitops.plan.identification.ServerUUID-">fetchServerTotalWorldTimes</a></span>(<a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>
 <div class="block">Sum total playtime per world on a server.</div>
 </td>
 </tr>
@@ -174,13 +174,13 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="fetchServerTotalWorldTimes-java.util.UUID-">
+<a name="fetchServerTotalWorldTimes-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>fetchServerTotalWorldTimes</h4>
-<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/WorldTimes.html" title="class in com.djrapitops.plan.gathering.domain">WorldTimes</a>&gt;&nbsp;fetchServerTotalWorldTimes(java.util.UUID&nbsp;serverUUID)</pre>
+<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/WorldTimes.html" title="class in com.djrapitops.plan.gathering.domain">WorldTimes</a>&gt;&nbsp;fetchServerTotalWorldTimes(<a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 <div class="block">Sum total playtime per world on a server.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -212,7 +212,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>fetchPlayerWorldTimesOnServers</h4>
-<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;java.util.UUID,<a href="../../../../../../../com/djrapitops/plan/gathering/domain/WorldTimes.html" title="class in com.djrapitops.plan.gathering.domain">WorldTimes</a>&gt;&gt;&nbsp;fetchPlayerWorldTimesOnServers(java.util.UUID&nbsp;playerUUID)</pre>
+<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;<a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>,<a href="../../../../../../../com/djrapitops/plan/gathering/domain/WorldTimes.html" title="class in com.djrapitops.plan.gathering.domain">WorldTimes</a>&gt;&gt;&nbsp;fetchPlayerWorldTimesOnServers(java.util.UUID&nbsp;playerUUID)</pre>
 <div class="block">Find total world times of the player on servers.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -222,7 +222,7 @@ extends java.lang.Object</pre>
 </dl>
 </li>
 </ul>
-<a name="fetchGMTimes-long-long-java.util.UUID-">
+<a name="fetchGMTimes-long-long-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -230,7 +230,7 @@ extends java.lang.Object</pre>
 <h4>fetchGMTimes</h4>
 <pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/GMTimes.html" title="class in com.djrapitops.plan.gathering.domain">GMTimes</a>&gt;&nbsp;fetchGMTimes(long&nbsp;after,
                                           long&nbsp;before,
-                                          java.util.UUID&nbsp;serverUUID)</pre>
+                                          <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 </li>
 </ul>
 </li>

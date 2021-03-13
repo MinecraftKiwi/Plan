@@ -146,11 +146,11 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>java.util.Optional&lt;java.util.UUID&gt;</code></td>
+<td class="colFirst"><code>java.util.Optional&lt;<a href="../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/djrapitops/plan/delivery/domain/mutators/PerServerMutator.html#favoriteServer--">favoriteServer</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>java.util.List&lt;<a href="../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.List&lt;<a href="../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/djrapitops/plan/delivery/domain/mutators/PerServerMutator.html#flatMapSessions--">flatMapSessions</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
@@ -170,11 +170,11 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/djrapitops/plan/delivery/domain/mutators/PerServerMutator.html#isOperator--">isOperator</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code>java.util.Map&lt;java.util.UUID,java.util.List&lt;<a href="../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&gt;</code></td>
+<td class="colFirst"><code>java.util.Map&lt;<a href="../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>,java.util.List&lt;<a href="../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/djrapitops/plan/delivery/domain/mutators/PerServerMutator.html#sessionsPerServer--">sessionsPerServer</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code>java.util.Map&lt;java.util.UUID,<a href="../../../../../../com/djrapitops/plan/gathering/domain/WorldTimes.html" title="class in com.djrapitops.plan.gathering.domain">WorldTimes</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.Map&lt;<a href="../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>,<a href="../../../../../../com/djrapitops/plan/gathering/domain/WorldTimes.html" title="class in com.djrapitops.plan.gathering.domain">WorldTimes</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/djrapitops/plan/delivery/domain/mutators/PerServerMutator.html#worldTimesPerServer--">worldTimesPerServer</a></span>()</code>&nbsp;</td>
 </tr>
 </table>
@@ -231,7 +231,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>flatMapSessions</h4>
-<pre>public&nbsp;java.util.List&lt;<a href="../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&nbsp;flatMapSessions()</pre>
+<pre>public&nbsp;java.util.List&lt;<a href="../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&nbsp;flatMapSessions()</pre>
 </li>
 </ul>
 <a name="flatMapWorldTimes--">
@@ -249,7 +249,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>worldTimesPerServer</h4>
-<pre>public&nbsp;java.util.Map&lt;java.util.UUID,<a href="../../../../../../com/djrapitops/plan/gathering/domain/WorldTimes.html" title="class in com.djrapitops.plan.gathering.domain">WorldTimes</a>&gt;&nbsp;worldTimesPerServer()</pre>
+<pre>public&nbsp;java.util.Map&lt;<a href="../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>,<a href="../../../../../../com/djrapitops/plan/gathering/domain/WorldTimes.html" title="class in com.djrapitops.plan.gathering.domain">WorldTimes</a>&gt;&nbsp;worldTimesPerServer()</pre>
 </li>
 </ul>
 <a name="favoriteServer--">
@@ -258,7 +258,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>favoriteServer</h4>
-<pre>public&nbsp;java.util.Optional&lt;java.util.UUID&gt;&nbsp;favoriteServer()</pre>
+<pre>public&nbsp;java.util.Optional&lt;<a href="../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&gt;&nbsp;favoriteServer()</pre>
 </li>
 </ul>
 <a name="sessionsPerServer--">
@@ -267,7 +267,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>sessionsPerServer</h4>
-<pre>public&nbsp;java.util.Map&lt;java.util.UUID,java.util.List&lt;<a href="../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&gt;&nbsp;sessionsPerServer()</pre>
+<pre>public&nbsp;java.util.Map&lt;<a href="../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>,java.util.List&lt;<a href="../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&gt;&nbsp;sessionsPerServer()</pre>
 </li>
 </ul>
 <a name="isBanned--">

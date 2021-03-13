@@ -109,7 +109,7 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">SessionQueries</span>
 extends java.lang.Object</pre>
-<div class="block">Queries for <a href="../../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain"><code>Session</code></a> objects.</div>
+<div class="block">Queries for <a href="../../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain"><code>FinishedSession</code></a> objects.</div>
 </li>
 </ul>
 </div>
@@ -130,9 +130,9 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#activePlaytime-long-long-java.util.UUID-">activePlaytime</a></span>(long&nbsp;after,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#activePlaytime-long-long-com.djrapitops.plan.identification.ServerUUID-">activePlaytime</a></span>(long&nbsp;after,
               long&nbsp;before,
-              java.util.UUID&nbsp;serverUUID)</code>&nbsp;</td>
+              <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;</code></td>
@@ -141,9 +141,9 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#afkTime-long-long-java.util.UUID-">afkTime</a></span>(long&nbsp;after,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#afkTime-long-long-com.djrapitops.plan.identification.ServerUUID-">afkTime</a></span>(long&nbsp;after,
        long&nbsp;before,
-       java.util.UUID&nbsp;serverUUID)</code>&nbsp;</td>
+       <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;</code></td>
@@ -154,16 +154,16 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#averageAfkPerPlayer-long-long-java.util.UUID-">averageAfkPerPlayer</a></span>(long&nbsp;after,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#averageAfkPerPlayer-long-long-com.djrapitops.plan.identification.ServerUUID-">averageAfkPerPlayer</a></span>(long&nbsp;after,
                    long&nbsp;before,
-                   java.util.UUID&nbsp;serverUUID)</code>&nbsp;</td>
+                   <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#averagePlaytimePerDay-long-long-long-java.util.UUID-">averagePlaytimePerDay</a></span>(long&nbsp;after,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#averagePlaytimePerDay-long-long-long-com.djrapitops.plan.identification.ServerUUID-">averagePlaytimePerDay</a></span>(long&nbsp;after,
                      long&nbsp;before,
                      long&nbsp;timeZoneOffset,
-                     java.util.UUID&nbsp;serverUUID)</code>&nbsp;</td>
+                     <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;</code></td>
@@ -174,55 +174,55 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#averagePlaytimePerPlayer-long-long-java.util.UUID-">averagePlaytimePerPlayer</a></span>(long&nbsp;after,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#averagePlaytimePerPlayer-long-long-com.djrapitops.plan.identification.ServerUUID-">averagePlaytimePerPlayer</a></span>(long&nbsp;after,
                         long&nbsp;before,
-                        java.util.UUID&nbsp;serverUUID)</code>&nbsp;</td>
+                        <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#earliestSessionStart--">earliestSessionStart</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&gt;</code></td>
+<td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#fetchAllSessions--">fetchAllSessions</a></span>()</code>
 <div class="block">Query the database for Session data with kill, death or world data.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&gt;</code></td>
+<td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#fetchLatestSessions-int-">fetchLatestSessions</a></span>(int&nbsp;limit)</code>&nbsp;</td>
 </tr>
 <tr id="i11" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#fetchLatestSessionsOfServer-java.util.UUID-int-">fetchLatestSessionsOfServer</a></span>(java.util.UUID&nbsp;serverUUID,
+<td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#fetchLatestSessionsOfServer-com.djrapitops.plan.identification.ServerUUID-int-">fetchLatestSessionsOfServer</a></span>(<a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID,
                            int&nbsp;limit)</code>&nbsp;</td>
 </tr>
 <tr id="i12" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#fetchServerSessionsWithoutKillOrWorldData-long-long-java.util.UUID-">fetchServerSessionsWithoutKillOrWorldData</a></span>(long&nbsp;after,
+<td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#fetchServerSessionsWithoutKillOrWorldData-long-long-com.djrapitops.plan.identification.ServerUUID-">fetchServerSessionsWithoutKillOrWorldData</a></span>(long&nbsp;after,
                                          long&nbsp;before,
-                                         java.util.UUID&nbsp;serverUUID)</code>&nbsp;</td>
+                                         <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>&nbsp;</td>
 </tr>
 <tr id="i13" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;java.util.UUID,java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&gt;&gt;</code></td>
+<td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;<a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>,java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#fetchSessionsOfPlayer-java.util.UUID-">fetchSessionsOfPlayer</a></span>(java.util.UUID&nbsp;playerUUID)</code>
 <div class="block">Query the database for Session data of a player with kill and world data.</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;java.util.UUID,java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#fetchSessionsOfServer-java.util.UUID-">fetchSessionsOfServer</a></span>(java.util.UUID&nbsp;serverUUID)</code>
+<td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;java.util.UUID,java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#fetchSessionsOfServer-com.djrapitops.plan.identification.ServerUUID-">fetchSessionsOfServer</a></span>(<a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>
 <div class="block">Query the database for Session data of a server with kill and world data.</div>
 </td>
 </tr>
 <tr id="i15" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/QueryStatement.html" title="class in com.djrapitops.plan.storage.database.queries">QueryStatement</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#fetchSessionsOfServerFlat-java.util.UUID-">fetchSessionsOfServerFlat</a></span>(java.util.UUID&nbsp;serverUUID)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/QueryStatement.html" title="class in com.djrapitops.plan.storage.database.queries">QueryStatement</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#fetchSessionsOfServerFlat-com.djrapitops.plan.identification.ServerUUID-">fetchSessionsOfServerFlat</a></span>(<a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>&nbsp;</td>
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#lastSeen-java.util.UUID-java.util.UUID-">lastSeen</a></span>(java.util.UUID&nbsp;playerUUID,
-        java.util.UUID&nbsp;serverUUID)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#lastSeen-java.util.UUID-com.djrapitops.plan.identification.ServerUUID-">lastSeen</a></span>(java.util.UUID&nbsp;playerUUID,
+        <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>&nbsp;</td>
 </tr>
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;</code></td>
@@ -231,22 +231,22 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i18" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#playtime-long-long-java.util.UUID-">playtime</a></span>(long&nbsp;after,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#playtime-long-long-com.djrapitops.plan.identification.ServerUUID-">playtime</a></span>(long&nbsp;after,
         long&nbsp;before,
-        java.util.UUID&nbsp;serverUUID)</code>&nbsp;</td>
+        <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>&nbsp;</td>
 </tr>
 <tr id="i19" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;java.util.UUID,java.lang.Long&gt;&gt;</code></td>
+<td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;<a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>,java.lang.Long&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#playtimeOfPlayer-long-long-java.util.UUID-">playtimeOfPlayer</a></span>(long&nbsp;after,
                 long&nbsp;before,
                 java.util.UUID&nbsp;playerUUID)</code>&nbsp;</td>
 </tr>
 <tr id="i20" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.NavigableMap&lt;java.lang.Long,java.lang.Long&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#playtimePerDay-long-long-long-java.util.UUID-">playtimePerDay</a></span>(long&nbsp;after,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#playtimePerDay-long-long-long-com.djrapitops.plan.identification.ServerUUID-">playtimePerDay</a></span>(long&nbsp;after,
               long&nbsp;before,
               long&nbsp;timeZoneOffset,
-              java.util.UUID&nbsp;serverUUID)</code>
+              <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>
 <div class="block">Query playtime for each day within range on a server.</div>
 </td>
 </tr>
@@ -262,16 +262,16 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i23" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#sessionCount-long-long-java.util.UUID-">sessionCount</a></span>(long&nbsp;after,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#sessionCount-long-long-com.djrapitops.plan.identification.ServerUUID-">sessionCount</a></span>(long&nbsp;after,
             long&nbsp;before,
-            java.util.UUID&nbsp;serverUUID)</code>&nbsp;</td>
+            <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>&nbsp;</td>
 </tr>
 <tr id="i24" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.NavigableMap&lt;java.lang.Long,java.lang.Integer&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#sessionCountPerDay-long-long-long-java.util.UUID-">sessionCountPerDay</a></span>(long&nbsp;after,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/SessionQueries.html#sessionCountPerDay-long-long-long-com.djrapitops.plan.identification.ServerUUID-">sessionCountPerDay</a></span>(long&nbsp;after,
                   long&nbsp;before,
                   long&nbsp;timeZoneOffset,
-                  java.util.UUID&nbsp;serverUUID)</code>
+                  <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>
 <div class="block">Query session count for each day within range on a server.</div>
 </td>
 </tr>
@@ -314,7 +314,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>fetchAllSessions</h4>
-<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&gt;&nbsp;fetchAllSessions()</pre>
+<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&gt;&nbsp;fetchAllSessions()</pre>
 <div class="block">Query the database for Session data with kill, death or world data.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -322,13 +322,13 @@ extends java.lang.Object</pre>
 </dl>
 </li>
 </ul>
-<a name="fetchSessionsOfServer-java.util.UUID-">
+<a name="fetchSessionsOfServer-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>fetchSessionsOfServer</h4>
-<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;java.util.UUID,java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&gt;&gt;&nbsp;fetchSessionsOfServer(java.util.UUID&nbsp;serverUUID)</pre>
+<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;java.util.UUID,java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&gt;&gt;&nbsp;fetchSessionsOfServer(<a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 <div class="block">Query the database for Session data of a server with kill and world data.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -338,13 +338,13 @@ extends java.lang.Object</pre>
 </dl>
 </li>
 </ul>
-<a name="fetchSessionsOfServerFlat-java.util.UUID-">
+<a name="fetchSessionsOfServerFlat-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>fetchSessionsOfServerFlat</h4>
-<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/QueryStatement.html" title="class in com.djrapitops.plan.storage.database.queries">QueryStatement</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&gt;&nbsp;fetchSessionsOfServerFlat(java.util.UUID&nbsp;serverUUID)</pre>
+<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/QueryStatement.html" title="class in com.djrapitops.plan.storage.database.queries">QueryStatement</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&gt;&nbsp;fetchSessionsOfServerFlat(<a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 </li>
 </ul>
 <a name="fetchSessionsOfPlayer-java.util.UUID-">
@@ -353,7 +353,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>fetchSessionsOfPlayer</h4>
-<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;java.util.UUID,java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&gt;&gt;&nbsp;fetchSessionsOfPlayer(java.util.UUID&nbsp;playerUUID)</pre>
+<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;<a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>,java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&gt;&gt;&nbsp;fetchSessionsOfPlayer(java.util.UUID&nbsp;playerUUID)</pre>
 <div class="block">Query the database for Session data of a player with kill and world data.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -363,25 +363,25 @@ extends java.lang.Object</pre>
 </dl>
 </li>
 </ul>
-<a name="fetchServerSessionsWithoutKillOrWorldData-long-long-java.util.UUID-">
+<a name="fetchServerSessionsWithoutKillOrWorldData-long-long-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>fetchServerSessionsWithoutKillOrWorldData</h4>
-<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&gt;&nbsp;fetchServerSessionsWithoutKillOrWorldData(long&nbsp;after,
-                                                                                       long&nbsp;before,
-                                                                                       java.util.UUID&nbsp;serverUUID)</pre>
+<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&gt;&nbsp;fetchServerSessionsWithoutKillOrWorldData(long&nbsp;after,
+                                                                                               long&nbsp;before,
+                                                                                               <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 </li>
 </ul>
-<a name="fetchLatestSessionsOfServer-java.util.UUID-int-">
+<a name="fetchLatestSessionsOfServer-com.djrapitops.plan.identification.ServerUUID-int-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>fetchLatestSessionsOfServer</h4>
-<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&gt;&nbsp;fetchLatestSessionsOfServer(java.util.UUID&nbsp;serverUUID,
-                                                                         int&nbsp;limit)</pre>
+<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&gt;&nbsp;fetchLatestSessionsOfServer(<a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID,
+                                                                                 int&nbsp;limit)</pre>
 </li>
 </ul>
 <a name="fetchLatestSessions-int-">
@@ -390,10 +390,10 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>fetchLatestSessions</h4>
-<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&gt;&nbsp;fetchLatestSessions(int&nbsp;limit)</pre>
+<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&gt;&nbsp;fetchLatestSessions(int&nbsp;limit)</pre>
 </li>
 </ul>
-<a name="sessionCount-long-long-java.util.UUID-">
+<a name="sessionCount-long-long-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -401,7 +401,7 @@ extends java.lang.Object</pre>
 <h4>sessionCount</h4>
 <pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;&nbsp;sessionCount(long&nbsp;after,
                                                  long&nbsp;before,
-                                                 java.util.UUID&nbsp;serverUUID)</pre>
+                                                 <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 </li>
 </ul>
 <a name="sessionCount-long-long-">
@@ -414,7 +414,7 @@ extends java.lang.Object</pre>
                                                  long&nbsp;before)</pre>
 </li>
 </ul>
-<a name="sessionCountPerDay-long-long-long-java.util.UUID-">
+<a name="sessionCountPerDay-long-long-long-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -423,7 +423,7 @@ extends java.lang.Object</pre>
 <pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.NavigableMap&lt;java.lang.Long,java.lang.Integer&gt;&gt;&nbsp;sessionCountPerDay(long&nbsp;after,
                                                                                                  long&nbsp;before,
                                                                                                  long&nbsp;timeZoneOffset,
-                                                                                                 java.util.UUID&nbsp;serverUUID)</pre>
+                                                                                                 <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 <div class="block">Query session count for each day within range on a server.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -436,7 +436,7 @@ extends java.lang.Object</pre>
 </dl>
 </li>
 </ul>
-<a name="playtime-long-long-java.util.UUID-">
+<a name="playtime-long-long-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -444,7 +444,7 @@ extends java.lang.Object</pre>
 <h4>playtime</h4>
 <pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;&nbsp;playtime(long&nbsp;after,
                                              long&nbsp;before,
-                                             java.util.UUID&nbsp;serverUUID)</pre>
+                                             <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 </li>
 </ul>
 <a name="playtimeOfPlayer-long-long-java.util.UUID-">
@@ -453,9 +453,9 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>playtimeOfPlayer</h4>
-<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;java.util.UUID,java.lang.Long&gt;&gt;&nbsp;playtimeOfPlayer(long&nbsp;after,
-                                                                                   long&nbsp;before,
-                                                                                   java.util.UUID&nbsp;playerUUID)</pre>
+<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;<a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>,java.lang.Long&gt;&gt;&nbsp;playtimeOfPlayer(long&nbsp;after,
+                                                                               long&nbsp;before,
+                                                                               java.util.UUID&nbsp;playerUUID)</pre>
 </li>
 </ul>
 <a name="playtime-long-long-">
@@ -468,7 +468,7 @@ extends java.lang.Object</pre>
                                              long&nbsp;before)</pre>
 </li>
 </ul>
-<a name="playtimePerDay-long-long-long-java.util.UUID-">
+<a name="playtimePerDay-long-long-long-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -477,7 +477,7 @@ extends java.lang.Object</pre>
 <pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.NavigableMap&lt;java.lang.Long,java.lang.Long&gt;&gt;&nbsp;playtimePerDay(long&nbsp;after,
                                                                                           long&nbsp;before,
                                                                                           long&nbsp;timeZoneOffset,
-                                                                                          java.util.UUID&nbsp;serverUUID)</pre>
+                                                                                          <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 <div class="block">Query playtime for each day within range on a server.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -490,7 +490,7 @@ extends java.lang.Object</pre>
 </dl>
 </li>
 </ul>
-<a name="averagePlaytimePerDay-long-long-long-java.util.UUID-">
+<a name="averagePlaytimePerDay-long-long-long-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -499,10 +499,10 @@ extends java.lang.Object</pre>
 <pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;&nbsp;averagePlaytimePerDay(long&nbsp;after,
                                                           long&nbsp;before,
                                                           long&nbsp;timeZoneOffset,
-                                                          java.util.UUID&nbsp;serverUUID)</pre>
+                                                          <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 </li>
 </ul>
-<a name="averagePlaytimePerPlayer-long-long-java.util.UUID-">
+<a name="averagePlaytimePerPlayer-long-long-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -510,7 +510,7 @@ extends java.lang.Object</pre>
 <h4>averagePlaytimePerPlayer</h4>
 <pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;&nbsp;averagePlaytimePerPlayer(long&nbsp;after,
                                                              long&nbsp;before,
-                                                             java.util.UUID&nbsp;serverUUID)</pre>
+                                                             <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 </li>
 </ul>
 <a name="averagePlaytimePerPlayer-long-long-">
@@ -531,7 +531,7 @@ extends java.lang.Object</pre>
 </dl>
 </li>
 </ul>
-<a name="averageAfkPerPlayer-long-long-java.util.UUID-">
+<a name="averageAfkPerPlayer-long-long-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -539,7 +539,7 @@ extends java.lang.Object</pre>
 <h4>averageAfkPerPlayer</h4>
 <pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;&nbsp;averageAfkPerPlayer(long&nbsp;after,
                                                         long&nbsp;before,
-                                                        java.util.UUID&nbsp;serverUUID)</pre>
+                                                        <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 </li>
 </ul>
 <a name="averageAfkPerPlayer-long-long-">
@@ -560,7 +560,7 @@ extends java.lang.Object</pre>
 </dl>
 </li>
 </ul>
-<a name="afkTime-long-long-java.util.UUID-">
+<a name="afkTime-long-long-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -568,7 +568,7 @@ extends java.lang.Object</pre>
 <h4>afkTime</h4>
 <pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;&nbsp;afkTime(long&nbsp;after,
                                             long&nbsp;before,
-                                            java.util.UUID&nbsp;serverUUID)</pre>
+                                            <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 </li>
 </ul>
 <a name="afkTime-long-long-">
@@ -591,17 +591,17 @@ extends java.lang.Object</pre>
                                                                                       long&nbsp;before)</pre>
 </li>
 </ul>
-<a name="lastSeen-java.util.UUID-java.util.UUID-">
+<a name="lastSeen-java.util.UUID-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>lastSeen</h4>
 <pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;&nbsp;lastSeen(java.util.UUID&nbsp;playerUUID,
-                                             java.util.UUID&nbsp;serverUUID)</pre>
+                                             <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 </li>
 </ul>
-<a name="activePlaytime-long-long-java.util.UUID-">
+<a name="activePlaytime-long-long-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -609,7 +609,7 @@ extends java.lang.Object</pre>
 <h4>activePlaytime</h4>
 <pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Long&gt;&nbsp;activePlaytime(long&nbsp;after,
                                                    long&nbsp;before,
-                                                   java.util.UUID&nbsp;serverUUID)</pre>
+                                                   <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 </li>
 </ul>
 <a name="uuidsOfPlayedBetween-long-long-">

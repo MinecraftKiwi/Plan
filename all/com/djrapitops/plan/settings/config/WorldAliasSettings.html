@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -162,9 +162,13 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/djrapitops/plan/settings/config/WorldAliasSettings.html#getLongestWorldPlayed-com.djrapitops.plan.gathering.domain.Session-">getLongestWorldPlayed</a></span>(<a href="../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&nbsp;session)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/djrapitops/plan/settings/config/WorldAliasSettings.html#getLongestWorldPlayed-com.djrapitops.plan.gathering.domain.ActiveSession-">getLongestWorldPlayed</a></span>(<a href="../../../../../com/djrapitops/plan/gathering/domain/ActiveSession.html" title="class in com.djrapitops.plan.gathering.domain">ActiveSession</a>&nbsp;session)</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/djrapitops/plan/settings/config/WorldAliasSettings.html#getLongestWorldPlayed-com.djrapitops.plan.gathering.domain.FinishedSession-">getLongestWorldPlayed</a></span>(<a href="../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&nbsp;session)</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.util.Map&lt;java.lang.String,java.lang.Long&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/djrapitops/plan/settings/config/WorldAliasSettings.html#getPlaytimePerAlias-com.djrapitops.plan.gathering.domain.WorldTimes-">getPlaytimePerAlias</a></span>(<a href="../../../../../com/djrapitops/plan/gathering/domain/WorldTimes.html" title="class in com.djrapitops.plan.gathering.domain">WorldTimes</a>&nbsp;worldTimes)</code>&nbsp;</td>
 </tr>
@@ -246,13 +250,22 @@ public&nbsp;WorldAliasSettings(dagger.Lazy&lt;<a href="../../../../../com/djrapi
 <pre>public&nbsp;java.util.Map&lt;java.lang.String,<a href="../../../../../com/djrapitops/plan/gathering/domain/GMTimes.html" title="class in com.djrapitops.plan.gathering.domain">GMTimes</a>&gt;&nbsp;getGMTimesPerAlias(<a href="../../../../../com/djrapitops/plan/gathering/domain/WorldTimes.html" title="class in com.djrapitops.plan.gathering.domain">WorldTimes</a>&nbsp;worldTimes)</pre>
 </li>
 </ul>
-<a name="getLongestWorldPlayed-com.djrapitops.plan.gathering.domain.Session-">
+<a name="getLongestWorldPlayed-com.djrapitops.plan.gathering.domain.ActiveSession-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLongestWorldPlayed</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getLongestWorldPlayed(<a href="../../../../../com/djrapitops/plan/gathering/domain/ActiveSession.html" title="class in com.djrapitops.plan.gathering.domain">ActiveSession</a>&nbsp;session)</pre>
+</li>
+</ul>
+<a name="getLongestWorldPlayed-com.djrapitops.plan.gathering.domain.FinishedSession-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getLongestWorldPlayed</h4>
-<pre>public&nbsp;java.lang.String&nbsp;getLongestWorldPlayed(<a href="../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&nbsp;session)</pre>
+<pre>public&nbsp;java.lang.String&nbsp;getLongestWorldPlayed(<a href="../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&nbsp;session)</pre>
 </li>
 </ul>
 </li>

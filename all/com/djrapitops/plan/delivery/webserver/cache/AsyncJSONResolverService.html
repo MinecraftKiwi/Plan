@@ -150,16 +150,16 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>&lt;T&gt;&nbsp;<a href="../../../../../../com/djrapitops/plan/delivery/webserver/cache/JSONStorage.StoredJSON.html" title="class in com.djrapitops.plan.delivery.webserver.cache">JSONStorage.StoredJSON</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/djrapitops/plan/delivery/webserver/cache/AsyncJSONResolverService.html#resolve-long-com.djrapitops.plan.delivery.webserver.cache.DataID-java.util.function.Supplier-">resolve</a></span>(long&nbsp;newerThanTimestamp,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/djrapitops/plan/delivery/webserver/cache/AsyncJSONResolverService.html#resolve-long-com.djrapitops.plan.delivery.webserver.cache.DataID-com.djrapitops.plan.identification.ServerUUID-java.util.function.Function-">resolve</a></span>(long&nbsp;newerThanTimestamp,
        <a href="../../../../../../com/djrapitops/plan/delivery/webserver/cache/DataID.html" title="enum in com.djrapitops.plan.delivery.webserver.cache">DataID</a>&nbsp;dataID,
-       java.util.function.Supplier&lt;T&gt;&nbsp;jsonCreator)</code>&nbsp;</td>
+       <a href="../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID,
+       java.util.function.Function&lt;<a href="../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>,T&gt;&nbsp;creator)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>&lt;T&gt;&nbsp;<a href="../../../../../../com/djrapitops/plan/delivery/webserver/cache/JSONStorage.StoredJSON.html" title="class in com.djrapitops.plan.delivery.webserver.cache">JSONStorage.StoredJSON</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/djrapitops/plan/delivery/webserver/cache/AsyncJSONResolverService.html#resolve-long-com.djrapitops.plan.delivery.webserver.cache.DataID-java.util.UUID-java.util.function.Function-">resolve</a></span>(long&nbsp;newerThanTimestamp,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/djrapitops/plan/delivery/webserver/cache/AsyncJSONResolverService.html#resolve-long-com.djrapitops.plan.delivery.webserver.cache.DataID-java.util.function.Supplier-">resolve</a></span>(long&nbsp;newerThanTimestamp,
        <a href="../../../../../../com/djrapitops/plan/delivery/webserver/cache/DataID.html" title="enum in com.djrapitops.plan.delivery.webserver.cache">DataID</a>&nbsp;dataID,
-       java.util.UUID&nbsp;serverUUID,
-       java.util.function.Function&lt;java.util.UUID,T&gt;&nbsp;creator)</code>&nbsp;</td>
+       java.util.function.Supplier&lt;T&gt;&nbsp;jsonCreator)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -203,7 +203,7 @@ public&nbsp;AsyncJSONResolverService(<a href="../../../../../../com/djrapitops/p
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="resolve-long-com.djrapitops.plan.delivery.webserver.cache.DataID-java.util.UUID-java.util.function.Function-">
+<a name="resolve-long-com.djrapitops.plan.delivery.webserver.cache.DataID-com.djrapitops.plan.identification.ServerUUID-java.util.function.Function-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -211,8 +211,8 @@ public&nbsp;AsyncJSONResolverService(<a href="../../../../../../com/djrapitops/p
 <h4>resolve</h4>
 <pre>public&nbsp;&lt;T&gt;&nbsp;<a href="../../../../../../com/djrapitops/plan/delivery/webserver/cache/JSONStorage.StoredJSON.html" title="class in com.djrapitops.plan.delivery.webserver.cache">JSONStorage.StoredJSON</a>&nbsp;resolve(long&nbsp;newerThanTimestamp,
                                           <a href="../../../../../../com/djrapitops/plan/delivery/webserver/cache/DataID.html" title="enum in com.djrapitops.plan.delivery.webserver.cache">DataID</a>&nbsp;dataID,
-                                          java.util.UUID&nbsp;serverUUID,
-                                          java.util.function.Function&lt;java.util.UUID,T&gt;&nbsp;creator)</pre>
+                                          <a href="../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID,
+                                          java.util.function.Function&lt;<a href="../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>,T&gt;&nbsp;creator)</pre>
 </li>
 </ul>
 <a name="resolve-long-com.djrapitops.plan.delivery.webserver.cache.DataID-java.util.function.Supplier-">

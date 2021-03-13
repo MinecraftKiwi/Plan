@@ -130,9 +130,9 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Double&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/PingQueries.html#averagePing-long-long-java.util.UUID-">averagePing</a></span>(long&nbsp;after,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/PingQueries.html#averagePing-long-long-com.djrapitops.plan.identification.ServerUUID-">averagePing</a></span>(long&nbsp;after,
            long&nbsp;before,
-           java.util.UUID&nbsp;serverUUID)</code>&nbsp;</td>
+           <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;java.util.UUID,java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Ping.html" title="class in com.djrapitops.plan.gathering.domain">Ping</a>&gt;&gt;&gt;</code></td>
@@ -152,17 +152,17 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Ping.html" title="class in com.djrapitops.plan.gathering.domain">Ping</a>&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/PingQueries.html#fetchPingDataOfServer-long-long-java.util.UUID-">fetchPingDataOfServer</a></span>(long&nbsp;after,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/PingQueries.html#fetchPingDataOfServer-long-long-com.djrapitops.plan.identification.ServerUUID-">fetchPingDataOfServer</a></span>(long&nbsp;after,
                      long&nbsp;before,
-                     java.util.UUID&nbsp;serverUUID)</code>&nbsp;</td>
+                     <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;java.util.UUID,java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Ping.html" title="class in com.djrapitops.plan.gathering.domain">Ping</a>&gt;&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/PingQueries.html#fetchPingDataOfServer-java.util.UUID-">fetchPingDataOfServer</a></span>(java.util.UUID&nbsp;serverUUID)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/PingQueries.html#fetchPingDataOfServer-com.djrapitops.plan.identification.ServerUUID-">fetchPingDataOfServer</a></span>(<a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;java.lang.String,<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Ping.html" title="class in com.djrapitops.plan.gathering.domain">Ping</a>&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/PingQueries.html#fetchPingDataOfServerByGeolocation-java.util.UUID-">fetchPingDataOfServerByGeolocation</a></span>(java.util.UUID&nbsp;serverUUID)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/djrapitops/plan/storage/database/queries/objects/PingQueries.html#fetchPingDataOfServerByGeolocation-com.djrapitops.plan.identification.ServerUUID-">fetchPingDataOfServerByGeolocation</a></span>(<a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -216,16 +216,16 @@ extends java.lang.Object</pre>
 </dl>
 </li>
 </ul>
-<a name="fetchPingDataOfServer-java.util.UUID-">
+<a name="fetchPingDataOfServer-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>fetchPingDataOfServer</h4>
-<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;java.util.UUID,java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Ping.html" title="class in com.djrapitops.plan.gathering.domain">Ping</a>&gt;&gt;&gt;&nbsp;fetchPingDataOfServer(java.util.UUID&nbsp;serverUUID)</pre>
+<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;java.util.UUID,java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Ping.html" title="class in com.djrapitops.plan.gathering.domain">Ping</a>&gt;&gt;&gt;&nbsp;fetchPingDataOfServer(<a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 </li>
 </ul>
-<a name="fetchPingDataOfServer-long-long-java.util.UUID-">
+<a name="fetchPingDataOfServer-long-long-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -233,16 +233,16 @@ extends java.lang.Object</pre>
 <h4>fetchPingDataOfServer</h4>
 <pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.List&lt;<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Ping.html" title="class in com.djrapitops.plan.gathering.domain">Ping</a>&gt;&gt;&nbsp;fetchPingDataOfServer(long&nbsp;after,
                                                                 long&nbsp;before,
-                                                                java.util.UUID&nbsp;serverUUID)</pre>
+                                                                <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 </li>
 </ul>
-<a name="fetchPingDataOfServerByGeolocation-java.util.UUID-">
+<a name="fetchPingDataOfServerByGeolocation-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>fetchPingDataOfServerByGeolocation</h4>
-<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;java.lang.String,<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Ping.html" title="class in com.djrapitops.plan.gathering.domain">Ping</a>&gt;&gt;&nbsp;fetchPingDataOfServerByGeolocation(java.util.UUID&nbsp;serverUUID)</pre>
+<pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;java.lang.String,<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Ping.html" title="class in com.djrapitops.plan.gathering.domain">Ping</a>&gt;&gt;&nbsp;fetchPingDataOfServerByGeolocation(<a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 </li>
 </ul>
 <a name="fetchPingDataOfNetworkByGeolocation--">
@@ -254,7 +254,7 @@ extends java.lang.Object</pre>
 <pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.util.Map&lt;java.lang.String,<a href="../../../../../../../com/djrapitops/plan/gathering/domain/Ping.html" title="class in com.djrapitops.plan.gathering.domain">Ping</a>&gt;&gt;&nbsp;fetchPingDataOfNetworkByGeolocation()</pre>
 </li>
 </ul>
-<a name="averagePing-long-long-java.util.UUID-">
+<a name="averagePing-long-long-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -262,7 +262,7 @@ extends java.lang.Object</pre>
 <h4>averagePing</h4>
 <pre>public static&nbsp;<a href="../../../../../../../com/djrapitops/plan/storage/database/queries/Query.html" title="interface in com.djrapitops.plan.storage.database.queries">Query</a>&lt;java.lang.Double&gt;&nbsp;averagePing(long&nbsp;after,
                                                   long&nbsp;before,
-                                                  java.util.UUID&nbsp;serverUUID)</pre>
+                                                  <a href="../../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 </li>
 </ul>
 </li>

@@ -187,7 +187,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/djrapitops/plan/delivery/domain/mutators/PlayersMutator.html" title="class in com.djrapitops.plan.delivery.domain.mutators">PlayersMutator</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/djrapitops/plan/delivery/domain/mutators/PlayersMutator.html#filterPlayedOnServer-java.util.UUID-">filterPlayedOnServer</a></span>(java.util.UUID&nbsp;serverUUID)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/djrapitops/plan/delivery/domain/mutators/PlayersMutator.html#filterPlayedOnServer-com.djrapitops.plan.identification.ServerUUID-">filterPlayedOnServer</a></span>(<a href="../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/djrapitops/plan/delivery/domain/mutators/PlayersMutator.html" title="class in com.djrapitops.plan.delivery.domain.mutators">PlayersMutator</a></code></td>
@@ -209,10 +209,10 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>java.util.Map&lt;java.lang.String,java.util.List&lt;<a href="../../../../../../com/djrapitops/plan/gathering/domain/Ping.html" title="class in com.djrapitops.plan.gathering.domain">Ping</a>&gt;&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/djrapitops/plan/delivery/domain/mutators/PlayersMutator.html#getPingPerCountry-java.util.UUID-">getPingPerCountry</a></span>(java.util.UUID&nbsp;serverUUID)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/djrapitops/plan/delivery/domain/mutators/PlayersMutator.html#getPingPerCountry-com.djrapitops.plan.identification.ServerUUID-">getPingPerCountry</a></span>(<a href="../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</code>&nbsp;</td>
 </tr>
 <tr id="i14" class="altColor">
-<td class="colFirst"><code>java.util.List&lt;<a href="../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.List&lt;<a href="../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/djrapitops/plan/delivery/domain/mutators/PlayersMutator.html#getSessions--">getSessions</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i15" class="rowColor">
@@ -349,13 +349,13 @@ extends java.lang.Object</pre>
                                    double&nbsp;limit)</pre>
 </li>
 </ul>
-<a name="filterPlayedOnServer-java.util.UUID-">
+<a name="filterPlayedOnServer-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>filterPlayedOnServer</h4>
-<pre>public&nbsp;<a href="../../../../../../com/djrapitops/plan/delivery/domain/mutators/PlayersMutator.html" title="class in com.djrapitops.plan.delivery.domain.mutators">PlayersMutator</a>&nbsp;filterPlayedOnServer(java.util.UUID&nbsp;serverUUID)</pre>
+<pre>public&nbsp;<a href="../../../../../../com/djrapitops/plan/delivery/domain/mutators/PlayersMutator.html" title="class in com.djrapitops.plan.delivery.domain.mutators">PlayersMutator</a>&nbsp;filterPlayedOnServer(<a href="../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 </li>
 </ul>
 <a name="all--">
@@ -385,13 +385,13 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;java.util.List&lt;java.lang.String&gt;&nbsp;getGeolocations()</pre>
 </li>
 </ul>
-<a name="getPingPerCountry-java.util.UUID-">
+<a name="getPingPerCountry-com.djrapitops.plan.identification.ServerUUID-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getPingPerCountry</h4>
-<pre>public&nbsp;java.util.Map&lt;java.lang.String,java.util.List&lt;<a href="../../../../../../com/djrapitops/plan/gathering/domain/Ping.html" title="class in com.djrapitops.plan.gathering.domain">Ping</a>&gt;&gt;&nbsp;getPingPerCountry(java.util.UUID&nbsp;serverUUID)</pre>
+<pre>public&nbsp;java.util.Map&lt;java.lang.String,java.util.List&lt;<a href="../../../../../../com/djrapitops/plan/gathering/domain/Ping.html" title="class in com.djrapitops.plan.gathering.domain">Ping</a>&gt;&gt;&nbsp;getPingPerCountry(<a href="../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID)</pre>
 </li>
 </ul>
 <a name="toActivityDataMap-long-long-">
@@ -461,7 +461,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getSessions</h4>
-<pre>public&nbsp;java.util.List&lt;<a href="../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&nbsp;getSessions()</pre>
+<pre>public&nbsp;java.util.List&lt;<a href="../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&nbsp;getSessions()</pre>
 </li>
 </ul>
 <a name="uuids--">

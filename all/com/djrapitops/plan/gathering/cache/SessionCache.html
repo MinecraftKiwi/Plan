@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":9,"i2":10,"i3":9,"i4":9,"i5":9};
+var methods = {"i0":10,"i1":9,"i2":10,"i3":10,"i4":9,"i5":9,"i6":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -147,9 +147,9 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>java.util.Optional&lt;<a href="../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/djrapitops/plan/gathering/cache/SessionCache.html#cacheSession-java.util.UUID-com.djrapitops.plan.gathering.domain.Session-">cacheSession</a></span>(java.util.UUID&nbsp;playerUUID,
-            <a href="../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&nbsp;session)</code>
+<td class="colFirst"><code>java.util.Optional&lt;<a href="../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/djrapitops/plan/gathering/cache/SessionCache.html#cacheSession-java.util.UUID-com.djrapitops.plan.gathering.domain.ActiveSession-">cacheSession</a></span>(java.util.UUID&nbsp;playerUUID,
+            <a href="../../../../../com/djrapitops/plan/gathering/domain/ActiveSession.html" title="class in com.djrapitops.plan.gathering.domain">ActiveSession</a>&nbsp;newSession)</code>
 <div class="block">Cache a new session.</div>
 </td>
 </tr>
@@ -158,23 +158,29 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/djrapitops/plan/gathering/cache/SessionCache.html#clear--">clear</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>java.util.Optional&lt;<a href="../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;</code></td>
+<td class="colFirst"><code>java.util.Optional&lt;<a href="../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/djrapitops/plan/gathering/cache/SessionCache.html#endSession-java.util.UUID-long-">endSession</a></span>(java.util.UUID&nbsp;playerUUID,
-          long&nbsp;time)</code>
+          long&nbsp;time)</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>java.util.Optional&lt;<a href="../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/djrapitops/plan/gathering/cache/SessionCache.html#endSession-java.util.UUID-long-com.djrapitops.plan.gathering.domain.ActiveSession-">endSession</a></span>(java.util.UUID&nbsp;playerUUID,
+          long&nbsp;time,
+          <a href="../../../../../com/djrapitops/plan/gathering/domain/ActiveSession.html" title="class in com.djrapitops.plan.gathering.domain">ActiveSession</a>&nbsp;activeSession)</code>
 <div class="block">End a session and save it to database.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>static java.util.Map&lt;java.util.UUID,<a href="../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;</code></td>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>static java.util.Collection&lt;<a href="../../../../../com/djrapitops/plan/gathering/domain/ActiveSession.html" title="class in com.djrapitops.plan.gathering.domain">ActiveSession</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/djrapitops/plan/gathering/cache/SessionCache.html#getActiveSessions--">getActiveSessions</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>static java.util.Optional&lt;<a href="../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;</code></td>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>static java.util.Optional&lt;<a href="../../../../../com/djrapitops/plan/gathering/domain/ActiveSession.html" title="class in com.djrapitops.plan.gathering.domain">ActiveSession</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/djrapitops/plan/gathering/cache/SessionCache.html#getCachedSession-java.util.UUID-">getCachedSession</a></span>(java.util.UUID&nbsp;playerUUID)</code>
 <div class="block">Used to get the Session of the player in the sessionCache.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/djrapitops/plan/gathering/cache/SessionCache.html#refreshActiveSessionsState--">refreshActiveSessionsState</a></span>()</code>&nbsp;</td>
 </tr>
@@ -224,7 +230,7 @@ public&nbsp;SessionCache()</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getActiveSessions</h4>
-<pre>public static&nbsp;java.util.Map&lt;java.util.UUID,<a href="../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&nbsp;getActiveSessions()</pre>
+<pre>public static&nbsp;java.util.Collection&lt;<a href="../../../../../com/djrapitops/plan/gathering/domain/ActiveSession.html" title="class in com.djrapitops.plan.gathering.domain">ActiveSession</a>&gt;&nbsp;getActiveSessions()</pre>
 </li>
 </ul>
 <a name="clear--">
@@ -251,7 +257,7 @@ public&nbsp;SessionCache()</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getCachedSession</h4>
-<pre>public static&nbsp;java.util.Optional&lt;<a href="../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&nbsp;getCachedSession(java.util.UUID&nbsp;playerUUID)</pre>
+<pre>public static&nbsp;java.util.Optional&lt;<a href="../../../../../com/djrapitops/plan/gathering/domain/ActiveSession.html" title="class in com.djrapitops.plan.gathering.domain">ActiveSession</a>&gt;&nbsp;getCachedSession(java.util.UUID&nbsp;playerUUID)</pre>
 <div class="block">Used to get the Session of the player in the sessionCache.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -261,21 +267,41 @@ public&nbsp;SessionCache()</pre>
 </dl>
 </li>
 </ul>
-<a name="cacheSession-java.util.UUID-com.djrapitops.plan.gathering.domain.Session-">
+<a name="cacheSession-java.util.UUID-com.djrapitops.plan.gathering.domain.ActiveSession-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>cacheSession</h4>
-<pre>public&nbsp;java.util.Optional&lt;<a href="../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&nbsp;cacheSession(java.util.UUID&nbsp;playerUUID,
-                                                <a href="../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&nbsp;session)</pre>
+<pre>public&nbsp;java.util.Optional&lt;<a href="../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&nbsp;cacheSession(java.util.UUID&nbsp;playerUUID,
+                                                        <a href="../../../../../com/djrapitops/plan/gathering/domain/ActiveSession.html" title="class in com.djrapitops.plan.gathering.domain">ActiveSession</a>&nbsp;newSession)</pre>
 <div class="block">Cache a new session.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>playerUUID</code> - UUID of the player</dd>
-<dd><code>session</code> - Session to cache.</dd>
+<dd><code>newSession</code> - Session to cache.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Optional: previous session. Recipients of this object should decide if it needs to be saved.</dd>
+</dl>
+</li>
+</ul>
+<a name="endSession-java.util.UUID-long-com.djrapitops.plan.gathering.domain.ActiveSession-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>endSession</h4>
+<pre>public&nbsp;java.util.Optional&lt;<a href="../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&nbsp;endSession(java.util.UUID&nbsp;playerUUID,
+                                                      long&nbsp;time,
+                                                      <a href="../../../../../com/djrapitops/plan/gathering/domain/ActiveSession.html" title="class in com.djrapitops.plan.gathering.domain">ActiveSession</a>&nbsp;activeSession)</pre>
+<div class="block">End a session and save it to database.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>playerUUID</code> - UUID of the player.</dd>
+<dd><code>time</code> - Time the session ended.</dd>
+<dd><code>activeSession</code> - Currently active session</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Optional: ended session. Recipients of this object should decide if it needs to be saved.</dd>
 </dl>
 </li>
 </ul>
@@ -285,16 +311,8 @@ public&nbsp;SessionCache()</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>endSession</h4>
-<pre>public&nbsp;java.util.Optional&lt;<a href="../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&nbsp;endSession(java.util.UUID&nbsp;playerUUID,
-                                              long&nbsp;time)</pre>
-<div class="block">End a session and save it to database.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>playerUUID</code> - UUID of the player.</dd>
-<dd><code>time</code> - Time the session ended.</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>Optional: ended session. Recipients of this object should decide if it needs to be saved.</dd>
-</dl>
+<pre>public&nbsp;java.util.Optional&lt;<a href="../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&nbsp;endSession(java.util.UUID&nbsp;playerUUID,
+                                                      long&nbsp;time)</pre>
 </li>
 </ul>
 </li>

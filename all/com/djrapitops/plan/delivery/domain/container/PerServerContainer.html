@@ -101,7 +101,7 @@ var activeTableTab = "activeTableTab";
 <li>java.util.AbstractMap&lt;K,V&gt;</li>
 <li>
 <ul class="inheritance">
-<li>java.util.HashMap&lt;java.util.UUID,<a href="../../../../../../com/djrapitops/plan/delivery/domain/container/DataContainer.html" title="interface in com.djrapitops.plan.delivery.domain.container">DataContainer</a>&gt;</li>
+<li>java.util.HashMap&lt;<a href="../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>,<a href="../../../../../../com/djrapitops/plan/delivery/domain/container/DataContainer.html" title="interface in com.djrapitops.plan.delivery.domain.container">DataContainer</a>&gt;</li>
 <li>
 <ul class="inheritance">
 <li>com.djrapitops.plan.delivery.domain.container.PerServerContainer</li>
@@ -117,13 +117,13 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd>java.io.Serializable, java.lang.Cloneable, java.util.Map&lt;java.util.UUID,<a href="../../../../../../com/djrapitops/plan/delivery/domain/container/DataContainer.html" title="interface in com.djrapitops.plan.delivery.domain.container">DataContainer</a>&gt;</dd>
+<dd>java.io.Serializable, java.lang.Cloneable, java.util.Map&lt;<a href="../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>,<a href="../../../../../../com/djrapitops/plan/delivery/domain/container/DataContainer.html" title="interface in com.djrapitops.plan.delivery.domain.container">DataContainer</a>&gt;</dd>
 </dl>
 <hr>
 <br>
 <pre>public class <span class="typeNameLabel">PerServerContainer</span>
-extends java.util.HashMap&lt;java.util.UUID,<a href="../../../../../../com/djrapitops/plan/delivery/domain/container/DataContainer.html" title="interface in com.djrapitops.plan.delivery.domain.container">DataContainer</a>&gt;</pre>
-<div class="block">Container for data about a player linked to a single server.</div>
+extends java.util.HashMap&lt;<a href="../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>,<a href="../../../../../../com/djrapitops/plan/delivery/domain/container/DataContainer.html" title="interface in com.djrapitops.plan.delivery.domain.container">DataContainer</a>&gt;</pre>
+<div class="block">Container for data about a player linked.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../../com/djrapitops/plan/delivery/domain/keys/PerServerKeys.html" title="class in com.djrapitops.plan.delivery.domain.keys"><code>For Key objects.</code></a>, 
@@ -196,11 +196,11 @@ extends java.util.HashMap&lt;java.util.UUID,<a href="../../../../../../com/djrap
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/djrapitops/plan/delivery/domain/container/PerServerContainer.html#putSessions-java.util.Collection-">putSessions</a></span>(java.util.Collection&lt;<a href="../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&nbsp;sessions)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/djrapitops/plan/delivery/domain/container/PerServerContainer.html#putSessions-java.util.Collection-">putSessions</a></span>(java.util.Collection&lt;<a href="../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&nbsp;sessions)</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>&lt;T&gt;&nbsp;void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/djrapitops/plan/delivery/domain/container/PerServerContainer.html#putToContainerOfServer-java.util.UUID-com.djrapitops.plan.delivery.domain.keys.Key-T-">putToContainerOfServer</a></span>(java.util.UUID&nbsp;serverUUID,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/djrapitops/plan/delivery/domain/container/PerServerContainer.html#putToContainerOfServer-com.djrapitops.plan.identification.ServerUUID-com.djrapitops.plan.delivery.domain.keys.Key-T-">putToContainerOfServer</a></span>(<a href="../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID,
                       <a href="../../../../../../com/djrapitops/plan/delivery/domain/keys/Key.html" title="class in com.djrapitops.plan.delivery.domain.keys">Key</a>&lt;T&gt;&nbsp;key,
                       T&nbsp;value)</code>&nbsp;</td>
 </tr>
@@ -272,15 +272,15 @@ extends java.util.HashMap&lt;java.util.UUID,<a href="../../../../../../com/djrap
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="putToContainerOfServer-java.util.UUID-com.djrapitops.plan.delivery.domain.keys.Key-java.lang.Object-">
+<a name="putToContainerOfServer-com.djrapitops.plan.identification.ServerUUID-com.djrapitops.plan.delivery.domain.keys.Key-java.lang.Object-">
 <!--   -->
-</a><a name="putToContainerOfServer-java.util.UUID-com.djrapitops.plan.delivery.domain.keys.Key-T-">
+</a><a name="putToContainerOfServer-com.djrapitops.plan.identification.ServerUUID-com.djrapitops.plan.delivery.domain.keys.Key-T-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>putToContainerOfServer</h4>
-<pre>public&nbsp;&lt;T&gt;&nbsp;void&nbsp;putToContainerOfServer(java.util.UUID&nbsp;serverUUID,
+<pre>public&nbsp;&lt;T&gt;&nbsp;void&nbsp;putToContainerOfServer(<a href="../../../../../../com/djrapitops/plan/identification/ServerUUID.html" title="class in com.djrapitops.plan.identification">ServerUUID</a>&nbsp;serverUUID,
                                        <a href="../../../../../../com/djrapitops/plan/delivery/domain/keys/Key.html" title="class in com.djrapitops.plan.delivery.domain.keys">Key</a>&lt;T&gt;&nbsp;key,
                                        T&nbsp;value)</pre>
 </li>
@@ -318,7 +318,7 @@ extends java.util.HashMap&lt;java.util.UUID,<a href="../../../../../../com/djrap
 <ul class="blockList">
 <li class="blockList">
 <h4>putSessions</h4>
-<pre>public&nbsp;void&nbsp;putSessions(java.util.Collection&lt;<a href="../../../../../../com/djrapitops/plan/gathering/domain/Session.html" title="class in com.djrapitops.plan.gathering.domain">Session</a>&gt;&nbsp;sessions)</pre>
+<pre>public&nbsp;void&nbsp;putSessions(java.util.Collection&lt;<a href="../../../../../../com/djrapitops/plan/gathering/domain/FinishedSession.html" title="class in com.djrapitops.plan.gathering.domain">FinishedSession</a>&gt;&nbsp;sessions)</pre>
 </li>
 </ul>
 <a name="putPing-java.util.List-">
