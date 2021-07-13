@@ -16,6 +16,7 @@
  */
 package com.djrapitops.plan.delivery.rendering.html.structure;
 
+import com.djrapitops.plan.delivery.rendering.html.icon.Icon;
 import org.apache.commons.lang3.RegExUtils;
 
 /**
@@ -25,9 +26,11 @@ import org.apache.commons.lang3.RegExUtils;
  */
 public class TabsElement {
 
+    private final int pluginId;
     private final Tab[] tabs;
 
-    public TabsElement(Tab... tabs) {
+    public TabsElement(int pluginId, Tab... tabs) {
+        this.pluginId = pluginId;
         this.tabs = tabs;
     }
 
@@ -44,13 +47,13 @@ public class TabsElement {
         content.append("<div class=\"tab-content\">");
         boolean first = true;
         for (Tab tab : tabs) {
-            String id = tab.getId();
-            String navText = tab.getNavText();
+            String id = tab.getId(pluginId);
+            String navHtml = tab.getNavHtml();
             String contentHtml = tab.getContentHtml();
 
             nav.append("<li role=\"presentation\" class=\"nav-item col-black\"")
-                    .append("><a href=\"#").append(id).append("\" class=\"nav-link col-black").append(first ? " active" : "").append('"').append(" data-toggle=\"tab\">")
-                    .append(navText).append("</a></li>");
+                    .append("><a href=\"#").append(id).append("\" class=\"nav-link col-black").append(first ? " active" : "").append('"').append(" data-bs-toggle=\"tab\">")
+                    .append(navHtml).append("</a></li>");
             content.append("<div role=\"tabpanel\" class=\"tab-pane fade").append(first ? " in active show" : "")
                     .append("\" id=\"").append(id).append("\">")
                     .append(contentHtml).append("</div>");
@@ -64,24 +67,26 @@ public class TabsElement {
 
     public static class Tab {
 
-        private final String navText;
+        private final Icon icon;
+        private final String title;
         private final String contentHtml;
 
-        public Tab(String navText, String contentHtml) {
-            this.navText = navText;
+        public Tab(Icon icon, String title, String contentHtml) {
+            this.icon = icon;
+            this.title = title;
             this.contentHtml = contentHtml;
         }
 
-        public String getNavText() {
-            return navText;
+        public String getNavHtml() {
+            return icon.toHtml() + ' ' + title;
         }
 
         public String getContentHtml() {
             return contentHtml;
         }
 
-        public String getId() {
-            return "tab_" + RegExUtils.removeAll(navText, "[^a-zA-Z0-9]*").toLowerCase();
+        public String getId(int pluginId) {
+            return "tab_" + pluginId + "_" + RegExUtils.removeAll(title, "[^a-zA-Z0-9]*").toLowerCase();
         }
     }
 }

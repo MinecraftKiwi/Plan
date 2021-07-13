@@ -41,7 +41,7 @@ public class ExtDataBuilder implements ExtensionDataBuilder {
 
     @Override
     public ValueBuilder valueBuilder(String text) {
-        if (text == null || text.isEmpty()) throw new IllegalArgumentException("'text' can't be null or empty");
+        if (text == null) throw new IllegalArgumentException("'text' can't be null");
         return new ExtValueBuilder(text, extension);
     }
 
@@ -68,6 +68,10 @@ public class ExtDataBuilder implements ExtensionDataBuilder {
         return this;
     }
 
+    public Set<String> getInvalidatedValues() {
+        return invalidatedValues;
+    }
+
     public List<ClassValuePair> getValues() {
         Collections.sort(values);
         return values;
@@ -87,10 +91,7 @@ public class ExtDataBuilder implements ExtensionDataBuilder {
         }
 
         this.values.addAll(((ExtDataBuilder) builder).values);
-    }
-
-    public Set<String> getInvalidatedValues() {
-        return invalidatedValues;
+        this.invalidatedValues.addAll(((ExtDataBuilder) builder).invalidatedValues);
     }
 
     public static final class ClassValuePair implements Comparable<ClassValuePair> {

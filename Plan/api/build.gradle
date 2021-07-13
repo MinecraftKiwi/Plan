@@ -1,10 +1,10 @@
 dependencies {
     compileOnly "org.apache.commons:commons-text:$commonsTextVersion"
-    testCompile "org.apache.commons:commons-text:$commonsTextVersion"
+    testImplementation "org.apache.commons:commons-text:$commonsTextVersion"
     compileOnly "com.google.code.gson:gson:$gsonVersion"
 }
 
-ext.apiVersion = '5.2-R0.8'
+ext.apiVersion = '5.4-R0.1'
 
 publishing {
     repositories {

@@ -126,7 +126,9 @@ public class AccessControlTest {
         HttpURLConnection loginConnection = null;
         String cookie = "";
         try {
-            loginConnection = CONNECTOR.getConnection("GET", address + "/auth/login?user=" + username + "&password=testPass");
+            loginConnection = CONNECTOR.getConnection("POST", address + "/auth/login");
+            loginConnection.setDoOutput(true);
+            loginConnection.getOutputStream().write(("user=" + username + "&password=testPass").getBytes());
             try (InputStream in = loginConnection.getInputStream()) {
                 String responseBody = new String(IOUtils.toByteArray(in));
                 assertTrue(responseBody.contains("\"success\":true"), () -> "Not successful: " + responseBody);
@@ -146,7 +148,6 @@ public class AccessControlTest {
             "/server/" + TestConstants.SERVER_UUID_STRING + ",200",
             "/css/style.css,200",
             "/js/color-selector.js,200",
-            "/vendor/bootstrap/js/bootstrap.min.js,200",
             "/v1/serverOverview?server=" + TestConstants.SERVER_UUID_STRING + ",200",
             "/v1/onlineOverview?server=" + TestConstants.SERVER_UUID_STRING + ",200",
             "/v1/sessionsOverview?server=" + TestConstants.SERVER_UUID_STRING + ",200",
@@ -191,7 +192,9 @@ public class AccessControlTest {
             "/v1/players,200",
             "/query,200",
             "/v1/filters,200",
-            "/v1/query,400"
+            "/v1/query,400",
+            "/v1/errors,200",
+            "/errors,200",
     })
     void levelZeroCanAccess(String resource, String expectedResponseCode) throws NoSuchAlgorithmException, IOException, KeyManagementException {
         int responseCode = access(resource, cookieLevel0);
@@ -205,7 +208,6 @@ public class AccessControlTest {
             "/server/" + TestConstants.SERVER_UUID_STRING + ",403",
             "/css/style.css,200",
             "/js/color-selector.js,200",
-            "/vendor/bootstrap/js/bootstrap.min.js,200",
             "/v1/serverOverview?server=" + TestConstants.SERVER_UUID_STRING + ",403",
             "/v1/onlineOverview?server=" + TestConstants.SERVER_UUID_STRING + ",403",
             "/v1/sessionsOverview?server=" + TestConstants.SERVER_UUID_STRING + ",403",
@@ -250,7 +252,9 @@ public class AccessControlTest {
             "/v1/players,200",
             "/query,200",
             "/v1/filters,200",
-            "/v1/query,400"
+            "/v1/query,400",
+            "/v1/errors,403",
+            "/errors,403",
     })
     void levelOneCanAccess(String resource, String expectedResponseCode) throws NoSuchAlgorithmException, IOException, KeyManagementException {
         int responseCode = access(resource, cookieLevel1);
@@ -264,7 +268,6 @@ public class AccessControlTest {
             "/server/" + TestConstants.SERVER_UUID_STRING + ",403",
             "/css/style.css,200",
             "/js/color-selector.js,200",
-            "/vendor/bootstrap/js/bootstrap.min.js,200",
             "/v1/serverOverview?server=" + TestConstants.SERVER_UUID_STRING + ",403",
             "/v1/onlineOverview?server=" + TestConstants.SERVER_UUID_STRING + ",403",
             "/v1/sessionsOverview?server=" + TestConstants.SERVER_UUID_STRING + ",403",
@@ -309,7 +312,9 @@ public class AccessControlTest {
             "/v1/players,403",
             "/query,403",
             "/v1/filters,403",
-            "/v1/query,403"
+            "/v1/query,403",
+            "/v1/errors,403",
+            "/errors,403",
     })
     void levelTwoCanAccess(String resource, String expectedResponseCode) throws NoSuchAlgorithmException, IOException, KeyManagementException {
         int responseCode = access(resource, cookieLevel2);
@@ -323,7 +328,6 @@ public class AccessControlTest {
             "/server/" + TestConstants.SERVER_UUID_STRING + ",403",
             "/css/style.css,200",
             "/js/color-selector.js,200",
-            "/vendor/bootstrap/js/bootstrap.min.js,200",
             "/v1/serverOverview?server=" + TestConstants.SERVER_UUID_STRING + ",403",
             "/v1/onlineOverview?server=" + TestConstants.SERVER_UUID_STRING + ",403",
             "/v1/sessionsOverview?server=" + TestConstants.SERVER_UUID_STRING + ",403",

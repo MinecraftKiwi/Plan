@@ -23,6 +23,7 @@ import com.djrapitops.plan.exceptions.EnableException;
 import com.djrapitops.plan.settings.locale.Locale;
 import com.djrapitops.plan.settings.locale.lang.PluginLang;
 import com.djrapitops.plan.settings.theme.PlanColorScheme;
+import com.velocitypowered.api.command.CommandManager;
 import com.velocitypowered.api.event.Subscribe;
 import com.velocitypowered.api.event.proxy.ProxyInitializeEvent;
 import com.velocitypowered.api.event.proxy.ProxyShutdownEvent;
@@ -37,7 +38,6 @@ import org.bstats.velocity.Metrics;
 import org.slf4j.Logger;
 
 import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Path;
 import java.util.logging.Level;
@@ -95,12 +95,6 @@ public class PlanVelocity implements PlanPlugin {
         logger = abstractionLayer.getPluginLogger();
         runnableFactory = abstractionLayer.getRunnableFactory();
 
-        try {
-            new DependencyStartup(logger, abstractionLayer.getDependencyLoader()).loadDependencies();
-        } catch (IOException e) {
-            java.util.logging.Logger.getGlobal().log(Level.SEVERE, e, () -> this.getClass().getSimpleName());
-        }
-
         PlanVelocityComponent component = DaggerPlanVelocityComponent.builder()
                 .plan(this)
                 .abstractionLayer(abstractionLayer)
@@ -153,9 +147,12 @@ public class PlanVelocity implements PlanPlugin {
             logger.warn("Attempted to register a null command!");
             return;
         }
-        proxy.getCommandManager().register(
-                new VelocityCommand(runnableFactory, system.getErrorLogger(), command),
-                command.getAliases().toArray(new String[0])
+        CommandManager commandManager = proxy.getCommandManager();
+        commandManager.register(
+                commandManager.metaBuilder(command.getPrimaryAlias())
+                        .aliases(command.getAliases().toArray(new String[0]))
+                        .build(),
+                new VelocityCommand(runnableFactory, system.getErrorLogger(), command)
         );
     }
 

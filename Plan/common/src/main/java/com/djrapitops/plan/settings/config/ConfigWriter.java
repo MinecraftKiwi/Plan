@@ -68,10 +68,8 @@ public class ConfigWriter {
         ConfigNode storedParent = writing.parent;
         writing.updateParent(null);
 
-        Path directory = outputPath.getParent();
-        if (!directory.toRealPath().toFile().isDirectory()) {
-            Files.createDirectories(directory);
-        }
+        Path dir = outputPath.getParent();
+        if (!Files.isSymbolicLink(dir)) Files.createDirectories(dir);
         Files.write(outputPath, createLines(writing), StandardCharsets.UTF_8, StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.CREATE);
 
         writing.updateParent(storedParent);
@@ -97,7 +95,10 @@ public class ConfigWriter {
         Map<String, ConfigNode> children = writing.childNodes;
         for (String key : writing.getNodeOrder()) {
             ConfigNode node = children.get(key);
-            if (node.value == null && node.nodeOrder.isEmpty()) {
+            // node is null:       Inconsistent config node state
+            // value is null:      Has no value (empty)
+            // nodeOrder is empty: Has no children
+            if (node == null || node.value == null && node.nodeOrder.isEmpty()) {
                 continue;
             }
 

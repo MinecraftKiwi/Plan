@@ -25,18 +25,20 @@ public enum LangCode {
 
     CUSTOM("Custom", ""),
     EN("English", "AuroraLS3"),
-    ES("Spanish", "Catalina & itaquito & Elguerrero"),
-    CN("Simplified Chinese", "f0rb1d (\u4f5b\u58c1\u706f) & qsefthuopq & shaokeyibb & Fur_xia"),
-    CS("Czech", "Shadowhackercz & QuakyCZ & MrFriggo & WolverStones"),
-    DE("Deutsch", "Eyremba & fuzzlemann & Morsmorse & hallo1142"),
+    ES("Spanish", "Catalina, itaquito, Elguerrero & 4drian3d"),
+    CN("Simplified Chinese", "f0rb1d (\u4f5b\u58c1\u706f), qsefthuopq, shaokeyibb, Fur_xia & 10935336"),
+    CS("Czech", "Shadowhackercz, QuakyCZ, MrFriggo & WolverStones"),
+    DE("Deutsch", "Eyremba, fuzzlemann, Morsmorse & hallo1142"),
     FI("Finnish", "AuroraLS3"),
-    FR("French", "CyanTech & Aurelien & Nogapra"),
+    FR("French", "CyanTech, Aurelien & Nogapra"),
     IT("Italian", "Malachiel & Mastory_Md5"),
     JA("Japanese", "yukieji"),
     KO("Korean", "Guinness_Akihiko"),
+    NL("Dutch", "Sander0542"),
     RU("Russian", "Saph1s"),
-    TR("Turkish", "TDJisvan & BruilsiozPro"),
-    PT_BR("Portuguese (Brazil)", "jvmuller");
+    TR("Turkish", "TDJisvan, BruilsiozPro & EyuphanMandiraci"),
+    PT_BR("Portuguese (Brazil)", "jvmuller"),
+    ZH_TW("Traditional Chinese", "\u6d1b\u4f0a");
 
     private final String name;
     private final String authors;

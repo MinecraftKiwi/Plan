@@ -220,7 +220,7 @@ function mapToDataSeries(performanceData) {
 }
 
 function performanceChart(id, playersOnlineSeries, tpsSeries, cpuSeries, ramSeries, entitySeries, chunkSeries) {
-    graphs.push(Highcharts.stockChart(id, {
+    const chart = Highcharts.stockChart(id, {
         rangeSelector: {
             selected: 2,
             buttons: linegraphButtons
@@ -270,7 +270,23 @@ function performanceChart(id, playersOnlineSeries, tpsSeries, cpuSeries, ramSeri
             enabled: true
         },
         series: [playersOnlineSeries, tpsSeries, cpuSeries, ramSeries, entitySeries, chunkSeries]
-    }));
+    });
+
+    function toggleLabels() {
+        if (!chart || !chart.yAxis || !chart.yAxis.length) return;
+        const newWidth = $(window).width();
+        chart.yAxis[0].update({labels: {enabled: newWidth >= 900}});
+        chart.yAxis[1].update({labels: {enabled: newWidth >= 900}});
+        chart.yAxis[2].update({labels: {enabled: newWidth >= 1000}});
+        chart.yAxis[3].update({labels: {enabled: newWidth >= 1000}});
+        chart.yAxis[4].update({labels: {enabled: newWidth >= 1400}});
+        chart.yAxis[5].update({labels: {enabled: newWidth >= 1400}});
+    }
+
+    $(window).resize(toggleLabels);
+    toggleLabels();
+
+    graphs.push(chart);
 }
 
 function playersChart(id, playersOnlineSeries, sel) {
@@ -711,7 +727,23 @@ function worldPie(id, worldSeries, gmSeries) {
 }
 
 function updateGraphs() {
-    for (let graph of graphs) {
+    // HighCharts nukes the scrollbar variable from the given parameter
+    // If the graph doesn't support srollbars (bar, pie and map charts for example)
+    // This workaround stores a copy of the scrollbar so that it can be set
+    const scrollbar = {...Highcharts.theme.scrollbar};
+
+    function updateGraph(graph, index, array) {
+        // Empty objects can be left in the array if existing graph is re-rendered
+        if (Object.keys(graph).length === 0) {
+            array.splice(index, 1);
+            return;
+        }
+
+        // scrollbar workaround
+        if (!Highcharts.theme["scrollbar"]) Highcharts.theme["scrollbar"] = {...scrollbar};
+
         graph.update(Highcharts.theme);
     }
+
+    graphs.forEach(updateGraph);
 }

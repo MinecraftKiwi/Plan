@@ -22,6 +22,7 @@ import com.djrapitops.plan.delivery.web.resolver.Response;
 import com.djrapitops.plan.delivery.web.resolver.exception.BadRequestException;
 import com.djrapitops.plan.delivery.web.resolver.request.Request;
 import com.djrapitops.plan.delivery.web.resolver.request.URIQuery;
+import com.djrapitops.plan.delivery.webserver.RequestBodyConverter;
 import com.djrapitops.plan.delivery.webserver.auth.ActiveCookieStore;
 import com.djrapitops.plan.delivery.webserver.auth.FailReason;
 import com.djrapitops.plan.exceptions.PassEncryptException;
@@ -69,9 +70,10 @@ public class LoginResolver implements NoAuthResolver {
     }
 
     public User getUser(Request request) {
+        URIQuery form = RequestBodyConverter.formBody(request);
         URIQuery query = request.getQuery();
-        String username = query.get("user").orElseThrow(() -> new BadRequestException("'user' parameter not defined"));
-        String password = query.get("password").orElseThrow(() -> new BadRequestException("'password' parameter not defined"));
+        String username = getUser(form, query);
+        String password = getPassword(form, query);
         User user = dbSystem.getDatabase().query(WebUserQueries.fetchUser(username))
                 .orElseThrow(() -> new WebUserAuthException(FailReason.USER_PASS_MISMATCH));
 
@@ -80,5 +82,17 @@ public class LoginResolver implements NoAuthResolver {
             throw new WebUserAuthException(FailReason.USER_PASS_MISMATCH);
         }
         return user;
+    }
+
+    private String getPassword(URIQuery form, URIQuery query) {
+        return form.get("password")
+                .orElseGet(() -> query.get("password")
+                        .orElseThrow(() -> new BadRequestException("'password' parameter not defined")));
+    }
+
+    private String getUser(URIQuery form, URIQuery query) {
+        return form.get("user")
+                .orElseGet(() -> query.get("user")
+                        .orElseThrow(() -> new BadRequestException("'user' parameter not defined")));
     }
 }

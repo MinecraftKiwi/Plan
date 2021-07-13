@@ -112,6 +112,7 @@ public class PlayerPluginTab implements Comparable<PlayerPluginTab> {
                 tabsElement = buildContentHtml(genericTabData);
             } else {
                 tabsElement = new TabsElement(
+                        datum.getPluginID(),
                         datum.getTabs().stream().map(this::wrapToTabElementTab).toArray(TabsElement.Tab[]::new)
                 ).toHtmlFull();
             }
@@ -139,7 +140,7 @@ public class PlayerPluginTab implements Comparable<PlayerPluginTab> {
                 "<h1 class=\"h3 mb-0 text-gray-800\"><i class=\"sidebar-toggler fa fa-fw fa-bars\"></i>" + serverName + " &middot; Plugins Overview</h1>${backButton}" +
                 "</div>" +
                 // End Page heading
-                "<div class=\"card-columns\">" + content + "</div></div></div>";
+                "<div class=\"row\" data-masonry='{\"percentPosition\": true}'>" + content + "</div></div></div>";
     }
 
     private TabsElement.Tab wrapToTabElementTab(ExtensionTabData tabData) {
@@ -147,10 +148,8 @@ public class PlayerPluginTab implements Comparable<PlayerPluginTab> {
         String tabContentHtml = buildContentHtml(tabData);
 
         String tabName = tabInformation.getTabName();
-        return new TabsElement.Tab(tabName.isEmpty()
-                ? Icon.called("info-circle").build().toHtml() + " General"
-                : Icon.fromExtensionIcon(tabInformation.getTabIcon()).toHtml() + ' ' + tabName,
-                tabContentHtml);
+        return tabName.isEmpty() ? new TabsElement.Tab(Icon.called("info-circle").build(), "General", tabContentHtml)
+                : new TabsElement.Tab(Icon.fromExtensionIcon(tabInformation.getTabIcon()), tabName, tabContentHtml);
     }
 
     private String buildContentHtml(ExtensionTabData tabData) {
@@ -210,17 +209,19 @@ public class PlayerPluginTab implements Comparable<PlayerPluginTab> {
             builder.append("<p>");
         }
         builder.append(Icon.fromExtensionIcon(description.getIcon()))
-                .append(' ').append(description.getText()).append("<span class=\"float-right\"><b>").append(formattedValue).append("</b></span></p>");
+                .append(' ').append(description.getText()).append("<span class=\"float-end\"><b>").append(formattedValue).append("</b></span></p>");
     }
 
     private String wrapInContainer(ExtensionInformation information, String tabsElement) {
         String colWidth = hasWideTable ? "col-md-8 col-lg-8" : "col-md-4 col-lg-4";
         // TODO move large tables to their own tabs
-        return "<div class=\"card shadow mb-4\">" +
+        return "<div class=\"col-lg-6 col-xxl-4\">" +
+                "<div class=\"card shadow mb-4\">" +
                 "<div class=\"card-header py-3\">" +
-                "<h6 class=\"m-0 font-weight-bold col-black\">" + Icon.fromExtensionIcon(information.getIcon()) + ' ' + information.getPluginName() + "</h6>" +
+                "<h6 class=\"m-0 fw-bold col-black\">" + Icon.fromExtensionIcon(information.getIcon()) + ' ' + information.getPluginName() + "</h6>" +
                 "</div>" +
                 tabsElement +
+                "</div>" +
                 "</div>";
     }
 

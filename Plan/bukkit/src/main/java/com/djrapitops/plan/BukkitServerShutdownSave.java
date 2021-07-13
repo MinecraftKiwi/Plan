@@ -22,6 +22,7 @@ import com.djrapitops.plan.storage.database.DBSystem;
 import com.djrapitops.plan.utilities.java.Reflection;
 import com.djrapitops.plan.utilities.logging.ErrorLogger;
 import net.playeranalytics.plugin.server.PluginLogger;
+import org.bukkit.Bukkit;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -33,6 +34,8 @@ import javax.inject.Singleton;
  */
 @Singleton
 public class BukkitServerShutdownSave extends ServerShutdownSave {
+
+    private static final String IS_STOPPED = "isStopped";
 
     @Inject
     public BukkitServerShutdownSave(
@@ -46,19 +49,47 @@ public class BukkitServerShutdownSave extends ServerShutdownSave {
 
     @Override
     protected boolean checkServerShuttingDownStatus() {
+        return isStoppedBefore1p17() || isStoppedV1p17() || isStoppedAfterV1p17();
+    }
+
+    private boolean isStoppedBefore1p17() {
         try {
-            return performCheck();
+            // Special thanks to Fuzzlemann for figuring out the methods required for this check.
+            // https://github.com/plan-player-analytics/Plan/issues/769#issuecomment-433898242
+            Class<?> minecraftServerClass = Reflection.getMinecraftClass("MinecraftServer");
+            Object minecraftServer = Reflection.getField(minecraftServerClass, "SERVER", minecraftServerClass).get(null);
+
+            return Reflection.getField(minecraftServerClass, IS_STOPPED, boolean.class).get(minecraftServer);
         } catch (Exception | NoClassDefFoundError | NoSuchFieldError e) {
-            return false; // ShutdownHook handles save in case this fails upon plugin disable.
+            return false;
         }
     }
 
-    private boolean performCheck() {
-        // Special thanks to Fuzzlemann for figuring out the methods required for this check.
-        // https://github.com/plan-player-analytics/Plan/issues/769#issuecomment-433898242
-        Class<?> minecraftServerClass = Reflection.getMinecraftClass("MinecraftServer");
-        Object minecraftServer = Reflection.getField(minecraftServerClass, "SERVER", minecraftServerClass).get(null);
+    private boolean isStoppedV1p17() {
+        try {
+            // Special thanks to Fuzzlemann for figuring out the methods required for this check.
+            // https://github.com/plan-player-analytics/Plan/issues/769#issuecomment-433898242
+            Class<?> minecraftServerClass = Class.forName("net.minecraft.server.MinecraftServer");
+            Class<?> craftServerClass = Reflection.getCraftBukkitClass("CraftServer");
+            Object minecraftServer = Reflection.getField(craftServerClass, "console", minecraftServerClass).get(Bukkit.getServer());
 
-        return Reflection.getField(minecraftServerClass, "isStopped", boolean.class).get(minecraftServer);
+            return (Boolean) minecraftServerClass.getMethod(IS_STOPPED).invoke(minecraftServer);
+        } catch (Exception | NoClassDefFoundError | NoSuchFieldError | NoSuchMethodError e) {
+            return false;
+        }
+    }
+
+    private boolean isStoppedAfterV1p17() {
+        try {
+            // Special thanks to Fuzzlemann for figuring out the methods required for this check.
+            // https://github.com/plan-player-analytics/Plan/issues/769#issuecomment-433898242
+            Class<?> minecraftServerClass = Reflection.getMinecraftClass("MinecraftServer");
+            Class<?> craftServerClass = Reflection.getCraftBukkitClass("CraftServer");
+            Object minecraftServer = Reflection.getField(craftServerClass, "console", minecraftServerClass).get(Bukkit.getServer());
+
+            return (Boolean) minecraftServerClass.getMethod(IS_STOPPED).invoke(minecraftServer);
+        } catch (Exception | NoClassDefFoundError | NoSuchFieldError | NoSuchMethodError e) {
+            return false;
+        }
     }
 }

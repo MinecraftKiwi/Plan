@@ -23,7 +23,7 @@ package com.djrapitops.plan.settings.locale.lang;
  */
 public enum PluginLang implements Lang {
     ENABLED("Enable", "Player Analytics Enabled."),
-    ENABLED_WEB_SERVER("Enable - WebServer", "Webserver running on PORT ${0} (${1})"),
+    ENABLED_WEB_SERVER("Enable - WebServer", "Webserver running on PORT ${0} ( ${1} )"),
     ENABLED_DATABASE("Enable - Database", "${0}-database connection established."),
     API_ADD_RESOURCE_JS("API - js+", "PageExtension: ${0} added javascript(s) to ${1}, ${2}"),
     API_ADD_RESOURCE_CSS("API - css+", "PageExtension: ${0} added stylesheet(s) to ${1}, ${2}"),
@@ -83,7 +83,8 @@ public enum PluginLang implements Lang {
     DB_APPLIED_PATCHES_ALREADY("Database - Patches Applied Already", "All database patches already applied."),
     DB_NOTIFY_CLEAN("Database Notify - Clean", "Removed data of ${0} players."),
     DB_NOTIFY_SQLITE_WAL("Database Notify - SQLite No WAL", "SQLite WAL mode not supported on this server version, using default. This may or may not affect performance."),
-    DB_MYSQL_LAUNCH_OPTIONS_FAIL("Database MySQL - Launch Options Error", "Launch Options were faulty, using default (${0})");
+    DB_MYSQL_LAUNCH_OPTIONS_FAIL("Database MySQL - Launch Options Error", "Launch Options were faulty, using default (${0})"),
+    LOADING_SERVER_INFO("ServerInfo - Loading", "Loading server identifying information");
 
     private final String identifier;
     private final String defaultValue;

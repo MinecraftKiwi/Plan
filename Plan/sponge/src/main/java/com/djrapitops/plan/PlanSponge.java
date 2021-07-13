@@ -44,7 +44,6 @@ import org.spongepowered.api.plugin.Plugin;
 import org.spongepowered.api.scheduler.Task;
 
 import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -116,11 +115,6 @@ public class PlanSponge implements PlanPlugin {
         abstractionLayer = new SpongePlatformLayer(this, dataFolder, slf4jLogger);
         logger = abstractionLayer.getPluginLogger();
         runnableFactory = abstractionLayer.getRunnableFactory();
-        try {
-            new DependencyStartup(logger, abstractionLayer.getDependencyLoader()).loadDependencies();
-        } catch (IOException e) {
-            java.util.logging.Logger.getGlobal().log(Level.SEVERE, e, () -> this.getClass().getSimpleName());
-        }
     }
 
     public void onEnable() {

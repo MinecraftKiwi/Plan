@@ -21,6 +21,7 @@ import com.djrapitops.plan.delivery.web.resolver.Response;
 import com.djrapitops.plan.delivery.web.resolver.exception.BadRequestException;
 import com.djrapitops.plan.delivery.web.resolver.request.Request;
 import com.djrapitops.plan.delivery.web.resolver.request.URIQuery;
+import com.djrapitops.plan.delivery.webserver.RequestBodyConverter;
 import com.djrapitops.plan.delivery.webserver.auth.RegistrationBin;
 import com.djrapitops.plan.storage.database.DBSystem;
 import com.djrapitops.plan.storage.database.queries.objects.WebUserQueries;
@@ -55,12 +56,13 @@ public class RegisterResolver implements NoAuthResolver {
                     .build();
         }
 
-        String username = query.get("user").orElseThrow(() -> new BadRequestException("'user' parameter not defined"));
+        URIQuery form = RequestBodyConverter.formBody(request);
+        String username = getUser(form, query);
 
         boolean alreadyExists = dbSystem.getDatabase().query(WebUserQueries.fetchUser(username)).isPresent();
         if (alreadyExists) throw new BadRequestException("User already exists!");
 
-        String password = query.get("password").orElseThrow(() -> new BadRequestException("'password' parameter not defined"));
+        String password = getPassword(form, query);
         try {
             String code = RegistrationBin.addInfoForRegistration(username, password);
             return Response.builder()
@@ -75,4 +77,15 @@ public class RegisterResolver implements NoAuthResolver {
         }
     }
 
+    private String getPassword(URIQuery form, URIQuery query) {
+        return form.get("password")
+                .orElseGet(() -> query.get("password")
+                        .orElseThrow(() -> new BadRequestException("'password' parameter not defined")));
+    }
+
+    private String getUser(URIQuery form, URIQuery query) {
+        return form.get("user")
+                .orElseGet(() -> query.get("user")
+                        .orElseThrow(() -> new BadRequestException("'user' parameter not defined")));
+    }
 }
